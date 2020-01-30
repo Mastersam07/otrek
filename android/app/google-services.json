@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "682824575334",
+    "firebase_url": "https://otrek-cb470.firebaseio.com",
+    "project_id": "otrek-cb470",
+    "storage_bucket": "otrek-cb470.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682824575334:android:b7d3ecc1e2fec73bbd40a7",
+        "android_client_info": {
+          "package_name": "io.mastersam.otrek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682824575334-a9s5gchnhse2jcdghs8dtl861fhop7a0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.mastersam.otrek",
+            "certificate_hash": "cd5fe25122c6e55d9784c500b00d17ebefdee223"
+          }
+        },
+        {
+          "client_id": "682824575334-osdr2bc2lgvm23jp00fjte9o36aepi0c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCanZwMWfwPpgezy-_1OeUG32XATjLoXoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682824575334-osdr2bc2lgvm23jp00fjte9o36aepi0c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
