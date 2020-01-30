@@ -1,6 +1,6 @@
 # otrek
 
-A C-Walking Application In Flutter
+A Co-Walking Application In Flutter
 
 ## Getting Started
 
