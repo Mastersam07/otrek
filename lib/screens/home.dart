@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:otrek/utils/core.dart';
+import 'package:geolocator/geolocator.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -28,7 +29,7 @@ class Map extends StatefulWidget {
 
 class _MapState extends State<Map> {
   GoogleMapController mapController;
-  static const _initialPosition = LatLng(12.92, 77.02);
+  static const _initialPosition = LatLng(6.5244, 3.3792);
   LatLng _lastPosition = _initialPosition;
   final Set<Marker> _markers = {};
   @override
@@ -54,7 +55,10 @@ class _MapState extends State<Map> {
             onPressed: _onAddMarkerPressed,
             tooltip: 'add marker',
             backgroundColor: black,
-            child: Icon(Icons.add_location, color: white,),
+            child: Icon(
+              Icons.add_location,
+              color: white,
+            ),
           ),
         )
       ],
@@ -73,5 +77,18 @@ class _MapState extends State<Map> {
     });
   }
 
-  void _onAddMarkerPressed() {}
+  void _onAddMarkerPressed() {
+    setState(() {
+      _markers.add(
+        Marker(
+            markerId: MarkerId(_lastPosition.toString()),
+            position: _lastPosition,
+            infoWindow: InfoWindow(
+              title: "Lagos",
+              snippet: "Ikeja",
+            ),
+            icon: BitmapDescriptor.defaultMarker),
+      );
+    });
+  }
 }
