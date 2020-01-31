@@ -27,7 +27,6 @@ dependencies:
   #  geoflutterfire: ^2.0.3+2
   location:
   google_maps_webservice:
-  #  geolocator: any
   http:
   uuid:
   geolocator:
