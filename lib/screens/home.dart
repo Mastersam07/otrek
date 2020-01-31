@@ -98,7 +98,7 @@ class _MapState extends State<Map> {
                         height: 10,
                         child: Icon(Icons.location_on, color: Colors.black),
                       ),
-                      hintText: "Start Trekking",
+                      hintText:"Start Trekking",
                       border: InputBorder.none,
                       contentPadding: EdgeInsets.only(left: 15.0, top: 16.0),
                     ),
@@ -176,6 +176,19 @@ class _MapState extends State<Map> {
             icon: BitmapDescriptor.defaultMarker),
       );
     });
+  }
+
+  // convert list of doubles into LatLng
+  List<LatLng> convertToLatLng(List points) {
+    List<LatLng> result = <LatLng>[];
+    for (int i = 0; i < points.length; i++) {
+      if (i % 2 == 0) {
+        result.add(
+          LatLng(points[i - 1], points[i]),
+        );
+      }
+    }
+    return result;
   }
 
   // Decode poly points
