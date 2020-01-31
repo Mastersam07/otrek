@@ -39,7 +39,7 @@ class _MapState extends State<Map> {
         GoogleMap(
           initialCameraPosition: CameraPosition(
             target: _initialPosition,
-            zoom: 10.0,
+            zoom: 15.0,
           ),
           onMapCreated: onCreated,
           myLocationButtonEnabled: true,
@@ -49,15 +49,81 @@ class _MapState extends State<Map> {
           onCameraMove: _onCameraMove,
         ),
         Positioned(
-          top: 40,
-          right: 10,
-          child: FloatingActionButton(
-            onPressed: _onAddMarkerPressed,
-            tooltip: 'add marker',
-            backgroundColor: black,
-            child: Icon(
-              Icons.add_location,
-              color: white,
+          top: 50.0,
+          right: 15.0,
+          left: 15.0,
+          child: Container(
+            height: 50.0,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(3.0),
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.grey,
+                    offset: Offset(1.0, 5.0),
+                    blurRadius: 10,
+                    spreadRadius: 3
+                ),
+              ],
+            ),
+            child: TextField(
+              cursorColor: Colors.black,
+              // controller: locationController,
+              decoration: InputDecoration(
+                icon: Container(
+                  margin: EdgeInsets.only(
+                    left: 20,
+                    top: 5,
+                  ),
+                  width: 10,
+                  height: 10,
+                  child: Icon(Icons.location_on, color: Colors.black),
+                ),
+                hintText: "Start Trekking",
+                border: InputBorder.none,
+                contentPadding: EdgeInsets.only(left: 15.0, top: 16.0),
+              ),
+            ),
+          ),
+        ),
+        Positioned(
+          top: 105.0,
+          right: 15.0,
+          left: 15.0,
+          child: Container(
+            height: 50.0,
+            width: double.infinity,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(3.0),
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey,
+                    offset: Offset(1.0, 5.0),
+                    blurRadius: 10,
+                    spreadRadius: 3,
+                  )
+                ]
+            ),
+            child: TextField(
+              cursorColor: Colors.black,
+              // controller: destinationController,
+              textInputAction: TextInputAction.go,
+              onSubmitted: (value) {
+                // sendRequest(value);
+              },
+              decoration: InputDecoration(
+                icon: Container(
+                  margin: EdgeInsets.only(left: 20, top: 5),
+                  width: 10,
+                  height: 10,
+                  child: Icon(Icons.directions_walk, color: Colors.black,),
+                ),
+                hintText: "Destination?",
+                border: InputBorder.none,
+                contentPadding: EdgeInsets.only(left: 15.0, top: 16.0),
+              ),
             ),
           ),
         )
