@@ -76,17 +76,17 @@ class _MapState extends State<Map> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(3.0),
-                    color: Colors.white,
+                    color: white,
                     boxShadow: [
                       BoxShadow(
-                          color: Colors.grey,
+                          color: grey,
                           offset: Offset(1.0, 5.0),
                           blurRadius: 10,
                           spreadRadius: 3),
                     ],
                   ),
                   child: TextField(
-                    cursorColor: Colors.black,
+                    cursorColor: black,
                     controller: locationController,
                     decoration: InputDecoration(
                       icon: Container(
@@ -140,7 +140,7 @@ class _MapState extends State<Map> {
                           color: Colors.black,
                         ),
                       ),
-                      hintText: "Destination?",
+                      hintText: "Destination",
                       border: InputBorder.none,
                       contentPadding: EdgeInsets.only(left: 15.0, top: 16.0),
                     ),
